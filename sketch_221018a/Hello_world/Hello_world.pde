@@ -1,0 +1,40 @@
+//Global Variables
+int appWidth, appHeight;
+//
+void setup() {
+  //Declaring Display Geometry: landscape, square, portrait
+  size(700, 400); //Able to deploy with fullScreen();
+  //fullScreen();
+  appWidth = width;
+  appHeight = height;
+  //Concatenation: , or + (i.e space)
+  println("\t\t\tWidth="+width, "\tHeight="+height);
+  println("Display Monitor:", "\twidth:"+displayWidth, "\theight:"+displayHeight);
+  //
+  String ls="Landscape or Square", p="portrait", DO="Display Orientation", instruct="Bru, turn your phun";
+  //
+  if ( appWidth < appHeight ) { //Declaring Landscape & square
+    println(instruct);
+  } else {
+    println("Display: Good to Go");
+    if ( appWidth > displayWidth ) { //Fitting CANVAS into Monitor Display
+      appWidth=0;
+      appHeight=0;
+      println("STOP, is broken");
+    } else {
+      //Empty ELSE
+    }
+  }
+} //End setup
+//
+void draw() {
+  ellipse(70,100,120,120); rect(300,100,100,100); triangle (120, 300, 232, 80, 344, 300);
+} //End draw
+//
+void keyPressed() {
+} //End keyPressed
+//
+void mousePressed() {
+} //End mousePressed
+//
+// End Main Program

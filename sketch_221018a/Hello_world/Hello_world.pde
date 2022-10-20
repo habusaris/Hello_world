@@ -3,7 +3,11 @@ int appWidth, appHeight;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, portrait
-  size(700, 400); //Able to deploy with fullScreen();
+  
+  background(255);
+  
+  
+  size(1920, 1080); //Able to deploy with fullScreen();
   //fullScreen();
   appWidth = width;
   appHeight = height;
@@ -27,9 +31,8 @@ void setup() {
   }
 } //End setup
 //
-void draw() {
-  ellipse(70,100,120,120); rect(300,100,100,100); triangle (120, 300, 232, 80, 344, 300);
-} //End draw
+
+ //End draw
 //
 void keyPressed() {
 } //End keyPressed
@@ -37,4 +40,46 @@ void keyPressed() {
 void mousePressed() {
 } //End mousePressed
 //
-// End Main Program
+// End Main Program]
+
+
+
+
+
+
+void draw()
+{
+
+
+  tileAp();
+}
+
+void tileAp()
+{
+  fill(0);
+  if(mousePressed && mouseX <= 1920 && mouseX >= 0 && mouseY >= 0 && mouseY <= 1080)
+  {
+
+      drawM(true);
+  }  
+  
+
+  
+  fill(0);
+  if(mousePressed && mouseX <= 1920 && mouseX >= 0 && mouseY >= 0 && mouseY <= 1080)
+  {
+
+      drawM(true);
+  }
+  else
+  {
+
+  }
+}     
+void drawM(boolean b)
+{
+  if(b == true)
+  {  
+    rect(mouseX, mouseY, 10,10);
+  }
+}  

@@ -29,13 +29,25 @@ void setup() {
 } //End setup
 //
 void draw() {
-  ellipse(300, 100, 100, 120);
+ rect(100,100,200,100,0); rect(400,100,200,100,0); rect(200,250,300,100,0);
 } //End draw
 //
 void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
-} //End mousePressed
+} 
+
+//population
+centerx = ;
+centery = width * 1/2 ;
+xstart = height * 1/2;
+ystart = center - (width * 1/4);
+widthrect = center - (height * 1/4);
+heightrect = ;
+
+
+
+//End mousePressed
 //
 // End Main Program

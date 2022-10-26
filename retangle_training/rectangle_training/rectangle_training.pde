@@ -1,6 +1,6 @@
-
 //Global Variables
 int appWidth, appHeight;
+float centerX, centerY, xStart, yStart, widthRect, heightRect;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, portrait
@@ -26,28 +26,23 @@ void setup() {
       //Empty ELSE
     }
   }
+  //Population
+  centerX = width * 1/2;
+  centerY = height * 1/2;
+  xStart = centerX - ( width * 1/4 );
+  yStart  = centerY - ( height * 1/4 );
+  widthRect = width * 1/2;
+  heightRect = height * 1/2;
 } //End setup
 //
 void draw() {
- rect(100,100,200,100,0); rect(400,100,200,100,0); rect(200,250,300,100,0);
+  rect(xStart, yStart, widthRect, heightRect);
 } //End draw
 //
 void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
-} 
-
-//population
-centerx = ;
-centery = width * 1/2 ;
-xstart = height * 1/2;
-ystart = center - (width * 1/4);
-widthrect = center - (height * 1/4);
-heightrect = ;
-
-
-
-//End mousePressed
+} //End mousePressed
 //
 // End Main Program

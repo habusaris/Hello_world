@@ -1,6 +1,8 @@
-
 //Global Variables
 int appWidth, appHeight;
+float centerX, centerY, xStart, yStart, widthRect, heightRect;
+color blackNightMode=#000000 , green =#1BAF12; //Hexidecimal
+float thin, normal, thick;
 //
 void setup() {
   //Declaring Display Geometry: landscape, square, portrait
@@ -26,10 +28,34 @@ void setup() {
       //Empty ELSE
     }
   }
+  //Population
+  centerX = appWidth * 1/2;
+  centerY = height * 1/2;
+  xStart = centerX - ( appWidth * 1/4 );
+  yStart  = centerY - ( height * 1/4 );
+  widthRect = appWidth * 1/2;
+  heightRect = height * 1/2;
+  thin = appWidth / appWidth; //1
+  normal = appWidth * 1/70;
+  thick = appWidth * 1/35;
 } //End setup
 //
 void draw() {
-  ellipse(300, 100, 100, 120); square (100,100,100); } //End draw
+  // New Background Function "covers" old gray scale background()
+  // Night Mode means background cannot have blue // change randome for night mode, hard code "0"
+  background(100); //Gray Scale (0-255) & Blue Issue for night mode
+  //
+  //Casting Reminder
+  background( color( random(0 , 255), random(0 , 255), random(0 , 255) ) ); // Colour without blue
+  //
+  //background( blackNightMode );
+  strokeWeight( thick );
+  stroke(green);
+  rect(xStart, yStart, widthRect, heightRect);
+  stroke(1);
+strokeWeight(1); //default reset
+
+} //End draw
 //
 void keyPressed() {
 } //End keyPressed
